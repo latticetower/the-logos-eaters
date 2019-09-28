@@ -21,6 +21,7 @@ import Icon24Users from '@vkontakte/icons/dist/24/users';
 import Icon24Done from '@vkontakte/icons/dist/24/done';
 import Icon24Article from '@vkontakte/icons/dist/24/article';
 import Icon16Dropdown from '@vkontakte/icons/dist/16/dropdown';
+import connect from '@vkontakte/vk-connect';
 
 import './Home.css';
 import {menu} from '../menu'
@@ -53,6 +54,11 @@ const Material = ({id, data}) => {
                             ]}
                             size="m"
                         >Твоим друзья уже понравилось</UsersStack>
+                        <Button size="xl" level="secondary" 
+                        onClick={e => connect.send("VKWebAppShowWallPostBox", {"message": data.preview})}>
+                        Поделиться с друзьями
+                        </Button>
+
 
                     </Div>
                 </div>
