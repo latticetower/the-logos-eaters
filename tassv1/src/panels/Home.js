@@ -21,14 +21,25 @@ import Icon24Users from '@vkontakte/icons/dist/24/users';
 import Icon24Done from '@vkontakte/icons/dist/24/done';
 import Icon24Article from '@vkontakte/icons/dist/24/article';
 import Icon16Dropdown from '@vkontakte/icons/dist/16/dropdown';
+import Icon24ShareOutline from '@vkontakte/icons/dist/24/share_outline';
 
 import './Home.css';
 import {menu} from '../menu'
 
 
+function hashCode(s) {
+    let h;
+    for(let i = 0; i < s.length; i++)
+        h = Math.imul(31, h) + s.charCodeAt(i) | 0;
+
+    return h;
+}
+
 const Material = ({id, data}) => {
 
     const [expanded, setExpanded] = useState(false);
+
+    const share = event => { console.log(event.currentTarget.dataset.url) }
 
     return (
         <div>
@@ -46,14 +57,15 @@ const Material = ({id, data}) => {
                             Читать
                         </Button>
 
-                        <UsersStack
-                            photos={[
-                                'https://sun9-1.userapi.com/c850624/v850624456/9f63e/c2_IbBit7I8.jpg?ava=1',
-                                'https://sun9-6.userapi.com/c851528/v851528416/e0360/1UfQ8aSIGVA.jpg?ava=1'
-                            ]}
-                            size="m"
-                        >Твоим друзья уже понравилось</UsersStack>
-
+                        <Cell asideContent={<Button level="secondary" onClick={share} data-url={data.url}><Icon24ShareOutline/></Button>}>
+                            <UsersStack
+                                photos={[
+                                    'https://sun9-1.userapi.com/c850624/v850624456/9f63e/c2_IbBit7I8.jpg?ava=1',
+                                    'https://sun9-6.userapi.com/c851528/v851528416/e0360/1UfQ8aSIGVA.jpg?ava=1'
+                                ]}
+                                size="m"
+                            >Твоим друзья уже понравилось</UsersStack>
+                        </Cell>
                     </Div>
                 </div>
             </div>
@@ -119,6 +131,7 @@ const Home = ({id, go, fetchedUser}) => {
                     {
                         categories.map(category => (
                             <Cell
+                                key={hashCode(category)}
                                 before={<Icon24Article />}
                                 // asideContent={category === 'all' ? <Icon24Done fill="var(--accent)" /> : null}
                                 onClick={select}
