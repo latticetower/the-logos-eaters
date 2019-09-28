@@ -1,18 +1,17 @@
 {
   "files": {
-    "main.css": "/the-logos-eaters/static/css/main.a5406bad.chunk.css",
-    "main.js": "/the-logos-eaters/static/js/main.b88c0ecc.chunk.js",
-    "main.js.map": "/the-logos-eaters/static/js/main.b88c0ecc.chunk.js.map",
+    "main.css": "/the-logos-eaters/static/css/main.7767d719.chunk.css",
+    "main.js": "/the-logos-eaters/static/js/main.fba08042.chunk.js",
+    "main.js.map": "/the-logos-eaters/static/js/main.fba08042.chunk.js.map",
     "runtime-main.js": "/the-logos-eaters/static/js/runtime-main.16e5060e.js",
     "runtime-main.js.map": "/the-logos-eaters/static/js/runtime-main.16e5060e.js.map",
     "static/css/2.4e89ce74.chunk.css": "/the-logos-eaters/static/css/2.4e89ce74.chunk.css",
-    "static/js/2.3e961325.chunk.js": "/the-logos-eaters/static/js/2.3e961325.chunk.js",
-    "static/js/2.3e961325.chunk.js.map": "/the-logos-eaters/static/js/2.3e961325.chunk.js.map",
+    "static/js/2.c0a25528.chunk.js": "/the-logos-eaters/static/js/2.c0a25528.chunk.js",
+    "static/js/2.c0a25528.chunk.js.map": "/the-logos-eaters/static/js/2.c0a25528.chunk.js.map",
     "index.html": "/the-logos-eaters/index.html",
-    "precache-manifest.a4d5b41b11f2d945c6b7a58b92a506d0.js": "/the-logos-eaters/precache-manifest.a4d5b41b11f2d945c6b7a58b92a506d0.js",
+    "precache-manifest.40ea34488266968f46f73a78e65b91da.js": "/the-logos-eaters/precache-manifest.40ea34488266968f46f73a78e65b91da.js",
     "service-worker.js": "/the-logos-eaters/service-worker.js",
     "static/css/2.4e89ce74.chunk.css.map": "/the-logos-eaters/static/css/2.4e89ce74.chunk.css.map",
-    "static/css/main.a5406bad.chunk.css.map": "/the-logos-eaters/static/css/main.a5406bad.chunk.css.map",
-    "static/media/persik.png": "/the-logos-eaters/static/media/persik.4e1ec840.png"
+    "static/css/main.7767d719.chunk.css.map": "/the-logos-eaters/static/css/main.7767d719.chunk.css.map"
   }
 }
