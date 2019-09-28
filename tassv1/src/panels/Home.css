@@ -1,0 +1,23 @@
+.collapsible {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+
+    margin-bottom: 20px;
+}
+
+/* Make the image to responsive */
+.preview-pic {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.intro {
+    padding: 0;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    transition: 0.5s;
+}

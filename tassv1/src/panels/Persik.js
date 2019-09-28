@@ -21,7 +21,9 @@ const Persik = props => (
 		>
 			Persik
 		</PanelHeader>
-		<img className="Persik" src={persik} alt="Persik The Cat"/>
+		<div className="overlay">
+			<iframe src="https://monstry.tass.ru/" width="100%" height="100%"/>
+		</div>
 	</Panel>
 );
 
