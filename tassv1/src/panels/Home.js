@@ -56,7 +56,7 @@ const Material = ({id, data}) => {
                         >Твоим друзья уже понравилось</UsersStack>
                         <Button size="xl" level="secondary" 
                         onClick={e => connect.send("VKWebAppShowWallPostBox", {"message": data.preview})}>
-                        Поделиться с друзьями
+                        Поделиться
                         </Button>
 
 
