@@ -23,6 +23,9 @@ import Icon24Article from '@vkontakte/icons/dist/24/article';
 import Icon16Dropdown from '@vkontakte/icons/dist/16/dropdown';
 import Icon24ShareOutline from '@vkontakte/icons/dist/24/share_outline';
 
+import connect from '@vkontakte/vk-connect';
+
+
 import './Home.css';
 import {menu} from '../menu'
 
@@ -39,7 +42,7 @@ const Material = ({id, data}) => {
 
     const [expanded, setExpanded] = useState(false);
 
-    const share = event => { console.log(event.currentTarget.dataset.url) }
+    const share = event => connect.send("VKWebAppShowWallPostBox", {"message": data.preview})
 
     return (
         <div>
@@ -57,7 +60,8 @@ const Material = ({id, data}) => {
                             Читать
                         </Button>
 
-                        <Cell asideContent={<Button level="secondary" onClick={share} data-url={data.url}><Icon24ShareOutline/></Button>}>
+                        <Cell asideContent={
+                          <Button level="secondary" onClick={share} data-url={data.url}><Icon24ShareOutline/></Button>}>
                             <UsersStack
                                 photos={[
                                     'https://sun9-1.userapi.com/c850624/v850624456/9f63e/c2_IbBit7I8.jpg?ava=1',
@@ -66,6 +70,7 @@ const Material = ({id, data}) => {
                                 size="m"
                             >Твоим друзья уже понравилось</UsersStack>
                         </Cell>
+
                     </Div>
                 </div>
             </div>
