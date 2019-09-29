@@ -79,7 +79,7 @@ const Material = ({id, data}) => {
                         </Button>
 
                         <Cell asideContent={
-                          <Button level="secondary" onClick={postAtWall} data-url={data.url}><Icon24ShareOutline/></Button>
+                          <Button level="secondary" onClick={shareUrl} data-url={data.url}><Icon24Share/></Button>
                           }>
                             <UsersStack
                                 photos={[
@@ -89,7 +89,7 @@ const Material = ({id, data}) => {
                                 size="m"
                             >Твоим друзья уже понравилось</UsersStack>
                         </Cell>
-                        <Button level="secondary" onClick={shareUrl} data-url={data.url}><Icon24Share/></Button>
+                        
 
                     </Div>
                 </div>
