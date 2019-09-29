@@ -74,24 +74,13 @@ const Material = ({id, data}) => {
                     <Div>
                         <p>{data.intro}</p>
 
-                        <Button size="xl" level="secondary" onClick={e => window.open(data.url, "_blank")}>
+
+                    </Div>
+                    <Div style={{display: 'flex'}}>
+                        <Button size="xl" stretched style={{ marginRight: 8 }} onClick={e => window.open(data.url, "_blank")}>
                             Читать
                         </Button>
-
-                        <Cell asideContent={
-                          /*<Button level="secondary" onClick={postAtWall} data-url={data.url}><Icon24ShareOutline/></Button>*/
-                          <Button level="secondary" onClick={shareUrl} data-url={data.url}><Icon24Share/></Button>
-                          }>
-                            <UsersStack
-                                photos={[
-                                    'https://sun9-1.userapi.com/c850624/v850624456/9f63e/c2_IbBit7I8.jpg?ava=1',
-                                    'https://sun9-6.userapi.com/c851528/v851528416/e0360/1UfQ8aSIGVA.jpg?ava=1'
-                                ]}
-                                size="m"
-                            >Твоим друзья уже понравилось</UsersStack>
-                        </Cell>
-                        
-
+                        <Button size="xl" level="secondary" onClick={shareUrl} data-url={data.url}><Icon24Share/></Button>
                     </Div>
                 </div>
             </div>
