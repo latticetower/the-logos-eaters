@@ -22,6 +22,7 @@ import Icon24Done from '@vkontakte/icons/dist/24/done';
 import Icon24Article from '@vkontakte/icons/dist/24/article';
 import Icon16Dropdown from '@vkontakte/icons/dist/16/dropdown';
 import Icon24ShareOutline from '@vkontakte/icons/dist/24/share_outline';
+import Icon24Share from '@vkontakte/icons/dist/24/share';
 
 import connect from '@vkontakte/vk-connect';
 
@@ -50,11 +51,16 @@ function makeWallMessage(data) {
     return data.intro + "<img src="+data.preview+"/>";
 }
 
+function sharePost(data) {
+    return data.url;
+}
+
 const Material = ({id, data}) => {
 
     const [expanded, setExpanded] = useState(false);
 
-    const share = event => connect.send("VKWebAppShowWallPostBox", {"message": makeWallMessage(data)})
+    const postAtWall = event => connect.send("VKWebAppShowWallPostBox", {"message": makeWallMessage(data)});
+    const shareUrl = event => connect.send("VKWebAppShare", {"link": sharePost(data)});
 
     return (
         <div>
@@ -73,7 +79,8 @@ const Material = ({id, data}) => {
                         </Button>
 
                         <Cell asideContent={
-                          <Button level="secondary" onClick={share} data-url={data.url}><Icon24ShareOutline/></Button>}>
+                          <Button level="secondary" onClick={postAtWall} data-url={data.url}><Icon24ShareOutline/></Button>
+                          }>
                             <UsersStack
                                 photos={[
                                     'https://sun9-1.userapi.com/c850624/v850624456/9f63e/c2_IbBit7I8.jpg?ava=1',
@@ -82,6 +89,7 @@ const Material = ({id, data}) => {
                                 size="m"
                             >Твоим друзья уже понравилось</UsersStack>
                         </Cell>
+                        <Button level="secondary" onClick={shareUrl} data-url={data.url}><Icon24Share/></Button>
 
                     </Div>
                 </div>
