@@ -38,11 +38,15 @@ function hashCode(s) {
     return h;
 }
 
+function makeWallMessage(data) {
+    return data.intro + "<img src="+data.preview+"/>";
+}
+
 const Material = ({id, data}) => {
 
     const [expanded, setExpanded] = useState(false);
 
-    const share = event => connect.send("VKWebAppShowWallPostBox", {"message": data.preview})
+    const share = event => connect.send("VKWebAppShowWallPostBox", {"message": makeWallMessage(data)})
 
     return (
         <div>
