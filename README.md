@@ -1,2 +1,7 @@
-# the-logos-eaters
-our team's repo for vk hackathon (we might give up at any moment from now)
+= Каталогизатор Спецпроектов ТАСС
+
+VK Mini App для кейса ТАСС на хактоне VK Hackathon 2019.
+
+Исходный код проекта в каталоге `tassv1`.
+
+Сборка выполняется через `npm run deploy.
