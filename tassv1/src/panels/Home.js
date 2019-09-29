@@ -59,7 +59,7 @@ const Material = ({id, data}) => {
 
     const [expanded, setExpanded] = useState(false);
 
-    const postAtWall = event => connect.send("VKWebAppShowWallPostBox", {"message": makeWallMessage(data)});
+    /*const postAtWall = event => connect.send("VKWebAppShowWallPostBox", {"message": makeWallMessage(data)});*/
     const shareUrl = event => connect.send("VKWebAppShare", {"link": sharePost(data)});
 
     return (
@@ -79,6 +79,7 @@ const Material = ({id, data}) => {
                         </Button>
 
                         <Cell asideContent={
+                          /*<Button level="secondary" onClick={postAtWall} data-url={data.url}><Icon24ShareOutline/></Button>*/
                           <Button level="secondary" onClick={shareUrl} data-url={data.url}><Icon24Share/></Button>
                           }>
                             <UsersStack
